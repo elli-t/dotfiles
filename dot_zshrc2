@@ -100,7 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Hackerman shit
 alias wt_add='git worktree add'
 alias restart='source ~/.zshrc'
 
