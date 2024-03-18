@@ -14,31 +14,6 @@ vim.cmd.let({"g:rg_derive_root='true'"})
 vim.cmd.nmap({"<C-h>", "<Cmd>TmuxNavigateLeft<CR>"})
 vim.cmd.nmap({"<C-j>", "<Cmd>TmuxNavigateDown<CR>"})
 
--- General Stuff
-vim.opt.expandtab = true
-vim.opt.hidden = true
-vim.opt.lazyredraw = false
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.showcmd = true
-vim.opt.showmatch = true
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.tw = 80
-vim.opt.ttyfast = true
-vim.opt.wildmenu = true
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.list = false
-vim.opt.clipboard = unnamedplus
-vim.opt.showmode = false
-vim.cmd.highlight({"ExtraWhitespace", "ctermbg=red", "guibg=red"})
-
--- Highlight
-vim.opt.cursorline = true
-vim.cmd.highlight({"CursorLine", "ctermbg=darkgrey",  "term=none", "cterm=none"})
-vim.cmd.highlight({"LineNr", "ctermfg=yellow", "ctermbg=black"})
-
 -- Search
 vim.cmd.nnoremap({"<CR>", ":noh<CR><CR>"})
 
@@ -59,9 +34,6 @@ vim.cmd.nnoremap({"<C-H>", "<C-W><C-H>"})
 vim.cmd.nnoremap({"tc",  ":tabclose<CR>"})
 vim.cmd.nnoremap({"tn", ":tabnew %<CR>"})
 
--- Terminal remap
--- vim.cmd.tnoremap({"jj", "<C-\><C-n>"})
-
 local map = vim.keymap.set
 
 -- vim-tmux-navigator
@@ -71,3 +43,11 @@ if os.getenv("TMUX") then
   map("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>")
   map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
 end
+
+-- Paste from buffer without removing current buffer when highlighting
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- Leader + y will yank to system clipboard.
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])

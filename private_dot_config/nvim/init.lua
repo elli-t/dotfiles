@@ -1,4 +1,6 @@
+print('hello')
+
+require('remap')
 require('plugins')
 require('keybindings')
 require('options')
-require('lsp')

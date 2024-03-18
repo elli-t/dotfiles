@@ -20,6 +20,30 @@ vim.cmd.autocmd({"BufNewFile,BufRead", "*.lua", "setlocal", "sw=2", "sts=2", "ts
 --Colours
 vim.cmd.colorscheme({"slate"})
 
+-- General Stuff
+vim.opt.expandtab = true
+vim.opt.hidden = true
+vim.opt.lazyredraw = false
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.showcmd = true
+vim.opt.showmatch = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.tw = 80
+vim.opt.ttyfast = true
+vim.opt.wildmenu = true
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.list = false
+
+-- Highlight
+vim.opt.showmode = false
+vim.cmd.highlight({"ExtraWhitespace", "ctermbg=red", "guibg=red"})
+vim.opt.cursorline = true
+vim.cmd.highlight({"CursorLine", "ctermbg=darkgrey",  "term=none", "cterm=none"})
+vim.cmd.highlight({"LineNr", "ctermfg=yellow", "ctermbg=black"})
+
 --Spellcheck
 vim.o.spell = true
 vim.o.spelllang= "en"
