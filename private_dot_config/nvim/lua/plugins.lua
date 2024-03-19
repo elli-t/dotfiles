@@ -22,16 +22,14 @@ require("lazy").setup({
   "folke/trouble.nvim",
   "nvim-treesitter/nvim-treesitter",
   "chengzeyi/multiterm.vim",
-  -- LSP
-  "onsails/lspkind.nvim",
-  { 'neovim/nvim-lspconfig' },
-  { 'hrsh7th/nvim-cmp', config = [[require('config.nvim-cmp')]] },
-  { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' },
-  'L3MON4D3/LuaSnip',
-  'saadparwaiz1/cmp_luasnip',
-  "Mofiqul/vscode.nvim",
+
+-- LSP
+  {'williamboman/mason.nvim'},
+  {'williamboman/mason-lspconfig.nvim'},
+  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+  {'neovim/nvim-lspconfig'},
+  {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/nvim-cmp'},
+  {'L3MON4D3/LuaSnip'},
 })
 
